@@ -1,0 +1,79 @@
+/*   0%- 30% open */
+/*  30%- 40% sides close */
+/*  40%- 55% top closes */
+/*  55%- 90% closed */
+/*  90%-100% opens */
+@keyframes close_side {
+    30% {
+        transform: translate(0px, 0px);
+    }
+    40% {
+        transform: translate(var(--target_x), var(--target_y));
+    }
+    90% {
+        transform: translate(var(--target_x), var(--target_y));
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+@keyframes close_top {
+    40% {
+        transform: translate(0px, 0px);
+    }
+    55% {
+        transform: translate(var(--target_x), var(--target_y));
+    }
+    90% {
+        transform: translate(var(--target_x), var(--target_y));
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+.logo {
+    stroke: #E21A41;
+    stroke-width: 10;
+    stroke-linejoin: round;
+    fill: transparent;
+
+    background-color: #191919;
+}
+
+/* close */
+.top {
+    --target_x: 0px;
+    --target_y: 77px;
+    animation: close_top 3s linear infinite;
+}
+.side {
+    animation: close_side 3s linear infinite;
+}
+.right {
+    --target_x: -17px;
+    --target_y: 0px;
+}
+.left {
+    --target_x: 17px;
+    --target_y: 0px;
+}
+
+/* S */
+/* .top { */
+/*     --target_x: 0px; */
+/*     --target_y: 77px; */
+/*     animation: close_top 5s linear; */
+/* } */
+/* .side { */
+/*     animation: close_side 5s linear; */
+/* } */
+/* .right { */
+/*     --target_x: -17px; */
+/*     --target_y: 199px; */
+/* } */
+/* .left { */
+/*     --target_x: 17px; */
+/*     --target_y: 0px; */
+/* } */
+
