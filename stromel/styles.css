@@ -6,18 +6,19 @@ body {
 
 @font-face {
     font-family: ra_mono;
-    src: url("./Ra-Mono.woff") format("woff");
+    src: url("../Ra-Mono.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 .container {
     /* space left and right when getting too big */
-    max-width: 500px;
+    max-width: 650px;
     margin: auto;
+    min-height: 100vh;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
@@ -37,11 +38,11 @@ body {
 .text {
     font-family: ra_mono;
     color: var(--foreground_color);
-    font-size: 120px;
+    font-size: 130px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
     .text {
-        font-size: 24vw;
+        font-size: 20vw;
     }
 }
 
@@ -82,14 +83,16 @@ body {
 .top {
     --target_x: 0px;
     --target_y: 77px;
-    animation: close_top 3s linear infinite;
+    animation: close_top 10s linear infinite;
+    /* transform: translate(var(--target_x), var(--target_y)); */
 }
 .side {
-    animation: close_side 3s linear infinite;
+    animation: close_side 10s linear infinite;
+    /* transform: translate(var(--target_x), var(--target_y)); */
 }
 .right {
     --target_x: -17px;
-    --target_y: 0px;
+    --target_y: 199px;
 }
 .left {
     --target_x: 17px;
