@@ -12,19 +12,40 @@ body {
 }
 
 .container {
-    /* width: 100vw; */
-    height: 90vh;
+    /* space left and right when getting too big */
+    max-width: 500px;
+    margin: auto;
+
+    /* remove scrolling */
+    height: 97vh;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+.logo {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    stroke: var(--foreground_color);
+    stroke-width: 10;
+    stroke-linejoin: round;
+    fill: transparent;
+
+    background-color: var(--background_color);
+}
 .text {
     font-family: ra_mono;
     color: var(--foreground_color);
-    font-size: 150px;
-    width: fit-content;
+    font-size: 120px;
+}
+@media screen and (max-width: 500px) {
+    .text {
+        font-size: 24vw;
+    }
 }
 
 /*   0%- 30% open */
@@ -59,15 +80,6 @@ body {
     100% {
         transform: translate(0px, 0px);
     }
-}
-
-.logo {
-    stroke: var(--foreground_color);
-    stroke-width: 10;
-    stroke-linejoin: round;
-    fill: transparent;
-
-    background-color: var(--background_color);
 }
 
 /* close */
