@@ -1,3 +1,32 @@
+body {
+    --background_color: #191919;
+    --foreground_color: #E21A41;
+    background-color: var(--background_color);
+}
+
+@font-face {
+    font-family: ra_mono;
+    src: url("./Ra-Mono.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container {
+    /* width: 100vw; */
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    font-family: ra_mono;
+    color: var(--foreground_color);
+    font-size: 150px;
+    width: fit-content;
+}
+
 /*   0%- 30% open */
 /*  30%- 40% sides close */
 /*  40%- 55% top closes */
@@ -33,12 +62,12 @@
 }
 
 .logo {
-    stroke: #E21A41;
+    stroke: var(--foreground_color);
     stroke-width: 10;
     stroke-linejoin: round;
     fill: transparent;
 
-    background-color: #191919;
+    background-color: var(--background_color);
 }
 
 /* close */
